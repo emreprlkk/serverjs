@@ -15,7 +15,7 @@ const client = new MongoClient(uri, {
   }
 });
 
-app.get('/', async (req, res) => {
+app.get('/full_data', async (req, res) => {
   try {
     await client.connect();
     const database = client.db('Library');
